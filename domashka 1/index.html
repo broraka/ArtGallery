@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мстители: Война бесконечности ч.1</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        body {
+            background: radial-gradient(circle at 50% 50%, #1c1c1c, #0d0d0d);
+            color: #e0e0e0;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+        .container {
+            background: linear-gradient(135deg, rgba(28, 28, 28, 0.95) 0%, rgba(50, 50, 50, 0.95) 100%);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            animation: fadeIn 2s ease-in-out;
+            margin: 20px;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .header {
+            font-size: 3em;
+            font-weight: 700;
+            color: #00ccff;
+            text-shadow: 0 0 10px rgba(0, 204, 255, 0.8), 0 0 20px rgba(0, 204, 255, 0.5);
+            margin-bottom: 30px;
+            animation: glow 1.5s infinite alternate;
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgba(0, 204, 255, 0.8), 0 0 20px rgba(0, 204, 255, 0.5);
+            }
+            to {
+                text-shadow: 0 0 20px rgba(0, 204, 255, 1), 0 0 30px rgba(0, 204, 255, 1);
+            }
+        }
+        .synopsis {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .image-container img {
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+            max-width: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .image-container img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 204, 255, 0.8);
+        }
+        .text-container {
+            margin-top: 20px;
+            text-align: center;
+            animation: slideUp 1s ease-in-out;
+        }
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .text-container p {
+            font-size: 1.2em;
+            line-height: 1.8em;
+        }
+        .tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            animation: fadeInTags 1.5s ease-in-out;
+        }
+        @keyframes fadeInTags {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .tag {
+            background: linear-gradient(45deg, #00ccff, #00ffcc);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-size: 1em;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+        }
+        .tag:hover {
+            background: linear-gradient(45deg, #00ffcc, #00ccff);
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.8);
+        }
+        .button-container {
+            margin-top: 30px;
+        }
+        .button {
+            background: linear-gradient(45deg, #00ccff, #00ffcc);
+            color: #0d0d0d;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+        }
+        .button:hover {
+            background: linear-gradient(45deg, #00ffcc, #00ccff);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.8);
+        }
+        .button:active {
+            transform: scale(0.95);
+        }
+        .actors-section {
+            margin-top: 50px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .actors-header {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #00ccff;
+            text-shadow: 0 0 10px rgba(0, 204, 255, 0.8), 0 0 20px rgba(0, 204, 255, 0.5);
+            margin-bottom: 30px;
+        }
+        .actors {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .actor {
+            background-color: rgba(28, 28, 28, 0.9);
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            width: 150px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .actor img {
+            border-radius: 15px;
+            width: 100%;
+            height: 200px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .actor:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 204, 255, 0.8);
+        }
+        .actor-name {
+            margin-top: 10px;
+            font-size: 1.1em;
+            color: #00ccff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Мстители: Война бесконечности ч.1</div>
+        <div class="synopsis">
+            <div class="image-container">
+                <img src="poster.jpg" alt="Мстители: Война бесконечности ч.1">
+            </div>
+            <div class="text-container">
+                <p>Пока Мстители и их союзники продолжают защищать мир от различных опасностей, с которыми не смог бы справиться один супергерой, новая угроза возникает из космоса: Танос. Межгалактический тиран преследует цель собрать все шесть Камней Бесконечности - артефакты невероятной силы, с помощью которых можно менять реальность по своему желанию. Всё, с чем Мстители сталкивались ранее, вело к этому моменту – судьба Земли никогда ещё не была столь неопределённой.</p>
+            </div>
+        </div>
+        <div class="tags">
+            <div class="tag">Боевик</div>
+            <div class="tag">Фантастика</div>
+            <div class="tag">Драма</div>
+            <div class="tag">Кинокомиксы</div>
+        </div>
+        <div class="button-container">
+            <button class="button" onclick="alert('Больше информации скоро!')">Узнать больше</button>
+        </div>
+        <div class="actors-section">
+            <div class="actors-header">В главных ролях</div>
+            <div class="actors">
+                <div class="actor">
+                    <img src="1.jpg" alt="Скарлетт Йоханссон">
+                    <div class="actor-name">Скарлетт Йоханссон</div>
+                </div>
+                <div class="actor">
+                    <img src="2.jpg" alt="Крис Хемсворт">
+                    <div class="actor-name">Крис Хемсворт</div>
+                </div>
+                <div class="actor">
+                    <img src="3.jpg" alt="Том Холланд">
+                    <div class="actor-name">Том Холланд</div>
+                </div>
+                <div class="actor">
+                    <img src="4.png" alt="Роберт Дауни мл.">
+                    <div class="actor-name">Роберт Дауни мл.</div>
+                </div>
+                <div class="actor">
+                    <img src="5.jpg" alt="Крис Эванс">
+                    <div class="actor-name">Крис Эванс</div>
+                </div>
+                <div class="actor">
+                    <img src="6.jpg" alt="Джош Бролин">
+                    <div class="actor-name">Джош Бролин</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtStudio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav-menu">
+        <a href="#header" class="menu-item logo">
+            <img src="img/icons/site-logo.svg" alt="" class="logo-img">
+        </a>
+        <a href="#about" class="menu-item">
+            <img src="img/icons/section2-ic.svg" alt="" class="item-img">
+        </a>
+        <a href="#advantages" class="menu-item">
+            <img src="img/icons/section3-ic.svg" alt="" class="item-img">
+        </a>
+        <a href="#photography" class="menu-item">
+            <img src="img/icons/section4-ic.svg" alt="" class="item-img">
+        </a>
+        <a href="#gallery" class="menu-item">
+            <img src="img/icons/section5-ic.svg" alt="" class="item-img">
+        </a>
+        <a href="#contact" class="menu-item">
+            <img src="img/icons/section6-ic.svg" alt="" class="item-img">
+        </a>
+    </div>
+    <div class="social">
+        <a href="" class="social-item">
+            <img src="img/icons/social-fb-ic.svg" alt="" class="social-item-img">
+        </a>
+        <a href="" class="social-item">
+            <img src="img/icons/social-inst-ic.svg" alt="" class="social-item-img">
+        </a>
+        <a href="" class="social-item">
+            <img src="img/icons/social-tiktok-ic.svg" alt="" class="social-item-img">
+        </a>
+        <a href="" class="social-item">
+            <img src="img/icons/social-vk-ic.svg" alt="" class="social-item-img">
+        </a>
+    </div>
+    <div class="header" id="header">
+        <div class="header-left">
+            <div class="color dark-blue"></div>
+            <div class="color red"></div>
+            <div class="color yellow"></div>
+            <div class="color light-blue"></div>
+        </div>
+        <div class="header-right">
+            <h1 class="header-title">Art <span>studio</span></h1>
+            <div class="header-branches">
+                <p class="branch-item">photography</p>
+                <p class="branch-item">art</p>
+                <p class="branch-item">design and branding</p>
+            </div>
+        </div>
+    </div>
+    <div class="about" id="about">
+        <div class="about-content">
+            <div class="about-content-left">
+                <h2 class="about-title">Кто мы?</h2>
+                <p class="about-text">Наша студия создает крутые дизайны и брендинг.
+                    Мы делаем качественно. В числе наших клиентов крупные компании и вообще мы молодцы</p>
+            </div>
+            <div class="about-content-right">
+                <div class="about-rect rect1"></div>
+                <div class="about-rect rect2"></div>
+                <div class="about-rect rect3"></div>
+            </div>
+        </div>
+        <div class="about-background">
+            <p class="bg-text">Знакомимся</p>
+        </div>
+    </div>
+    <div class="advantages" id="advantages">
+        <div class="advantages-content">
+            <h2 class="advantages-title">Современный дизайн</h2>
+            <p class="advantages-text">Разрушаем стереотипы,делаем крутой дизайн и создаем ШЕДВЕРЫ</p>
+            <img src="img/pictures/3rd-section-img.png" alt="" class="advantages-img">
+        </div>
+        <div class="advantages-background">
+            <p class="bg-text">Наша фишка</p>
+        </div>
+    </div>
+    <div class="photography" id="photography">
+        <div class="photography-left"></div>
+        <div class="photography-right">
+            <div class="photography-content">
+                <h2 class="photography-title">А еще...</h2>
+                <p class="photography-text">У нас крутые фотографы, которые могут сделать вам фотки.</p>
+            </div>
+            <div class="photography-bg">
+                <p class="bg-text">Мы полны сюрпризов</p>
+                <div class="bg-img"></div>
+            </div>
+        </div>
+    </div>
+    <div class="gallery" id="gallery">
+        <h2 class="gallery-title">Наше портфолио</h2>
+        <div class="gallery-content">
+            <img src="part2/img/pictures/gallery1.png" alt="" class="gallery-item item1">
+            <img src="part2/img/pictures/gallery2.png" alt="" class="gallery-item item2">  
+            <img src="part2/img/pictures/gallery3.png" alt="" class="gallery-item item3">  
+            <img src="part2/img/pictures/gallery4.png" alt="" class="gallery-item item4">  
+            <img src="part2/img/pictures/gallery5.png" alt="" class="gallery-item item5">  
+            <img src="part2/img/pictures/gallery6.png" alt="" class="gallery-item item6">  
+            <img src="part2/img/pictures/gallery7.png" alt="" class="gallery-item item7">    
+        </div>
+    </div>
+    <div class="contact" id="contact">
+        <div class="left-side"></div>
+        <div class="mid-side">
+            <h2 class="contact-title">Связатсья с нами</h2>
+            <form class="contact-form">
+                <label for="name" class="form-label">Имя</label>
+                <input type="text" class="text-input" id="name" placeholder="Иван Иванов">
+                <label for="email" class="form-label">Имя</label>
+                <input type="email" class="text-input" id="email" placeholder="example@gmail.com">
+                <label for="iscompany" class="form-label">Вид юр.лица</label>
+                <select id="iscompany" class="select-input">
+                    <option value="yes">Да, мы компания</option>
+                    <option value="no">Нет, я физ.лицо</option>
+                </select>
+                <label for="agreement" class="form-label">Согласие на обработку данных</label>
+                <input type="checkbox" id="agreement" class="check-input">
+                <button class="form-btn">Отправить форму</button>
+            </form>
+        </div>
+        <div class="right-side"></div>
+    </div>
+    
+</body>
+</html>
